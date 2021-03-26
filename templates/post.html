@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>post请求示例</title>
+</head>
+<body>
+    <form action="/post" method="post">
+        {% csrf_token %}
+        <input type="text" name="q" />
+        <input type="submit" value="搜索" />
+    </form>
+</body>
+</html>
