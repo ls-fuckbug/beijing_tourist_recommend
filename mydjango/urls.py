@@ -4,5 +4,7 @@ from . import view
 
 urlpatterns = [
     path('test/',include('testApp.urls')),
-    path('hello1/', view.runoob),
+    path('hello/', view.mainWindow),
+    path('hello/ajax/', view.getArgx),
+    path('login/',view.loginWindow)
 ]

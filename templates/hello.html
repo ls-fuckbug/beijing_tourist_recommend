@@ -4,13 +4,44 @@
 <head>
 <meta charset="utf-8">
 <title>嘤嘤嘤</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
     {% load static %}<br/>
     {{hello}}<img src="{% static "images/logo.png" %}" alt="niuniu-logo"><br/>
     {{ url|safe }}<br/>
     <h1>{{ hello }}</h1><br/>
-
+    <div>
+        <input type="button" id="bt1" name="xrag1" value="Button1">
+        <span id="arg"></span>
+    </div>
 </body>
+<script>
+    $("#bt1").click(function(){
+        let data = {
+            name : '故宫'
+        }
+        $.ajax({
+            url : 'ajax/',
+            type: 'post',
+            headers:{
+                // 要加 csrf 的请求头，如下
+                "X-CSRFToken": '{{ csrf_token }}',
+                // 要改请求头，以 json 格式发送信息
+                'Content-Type': 'application/json',
+            },
+            data: JSON.stringify(data),
+            dataType: "json",
+        }).done(function (result) {
+            console.log(result)
+            $("#arg").text(result.pos)
+        })
+    });
+</script>
 </html>
