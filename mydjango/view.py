@@ -1,5 +1,4 @@
 from django.shortcuts import render,HttpResponse
-from .sam.sam import getnum
 from .sam.getAddr import get_position
 import json
 
@@ -14,8 +13,9 @@ def mainWindow(request):
     return render(request, "hello.html", context)
 
 
-def loginWindow(request):
-    return render(request,"login.html")
+
+def travelHome(request):
+    return render(request,"index.html")
 
 
 def getArgx(request):
@@ -31,3 +31,27 @@ def getArgx(request):
         return HttpResponse(json.dumps(result), content_type="application/json")
     else:
         return HttpResponse('Error')
+
+def about(request):
+    return render(request,"about.html")
+
+def gallery(request):
+    return render(request,"gallery.html")
+
+def icons(request):
+    return render(request,"icons.html")
+
+def error404(request):
+    return render(request,"404.html")
+
+def blog(request):
+    return render(request,"blog.html")
+
+def blog_single(request):
+    return render(request,"blog-single.html")
+
+def contact(request):
+    return render(request,"contact.html")
+
+def select(request):
+    return render(request,"select.html")
