@@ -5,6 +5,7 @@ from django.urls import path, include
 from . import view
 
 urlpatterns = [
+    path('', view.travelHome),
     path('travelhome',view.travelHome),
     path('404.html',view.error404),
     path('about.html',view.about),
@@ -14,8 +15,9 @@ urlpatterns = [
     path('gallery.html', view.gallery),
     path('spot.html', view.spot_choose),
     path('route.html', view.route_show),
-    path('home/', view.mainWindow),
-    path('home/ajax/', view.getArgx),
+    path('reco', view.reco),
+    path('spot', view.mainWindow),
+
 ]
 
 

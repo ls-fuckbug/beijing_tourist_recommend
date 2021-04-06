@@ -1,47 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>嘤嘤嘤</title>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<title>choose spot</title>
+
 </head>
+
+
 <body>
-    {% load static %}<br/>
-    {{hello}}<img src="{% static "images/logo.png" %}" alt="niuniu-logo"><br/>
-    {{ url|safe }}<br/>
-    <h1>{{ hello }}</h1><br/>
-    <div>
-        <input type="button" id="bt1" name="spot1" value="故宫">
-        <span id="arg"></span>
-    </div>
+	<form action="/reco" method = "post">
+		<p><input type="checkbox" name="spot" value="故宫" />故宫 </p>
+		<p><input type="checkbox" name="spot" value="长城" />长城</p>
+		<p><input type="checkbox" name="spot" value="颐和园" />颐和园</p>
+		<p><input type="checkbox" name="spot" value="天坛" />天坛</p>
+		<p><input type="checkbox" name="spot" value="天安门" />天安门</p>
+		<p><input type="checkbox" name="spot" value="王府井" />王府井</p>
+		<p><input type="checkbox" name="spot" value="人民大会堂" />人民大会堂</p>
+
+		<p><input id="submit" type="submit" value="提交"/></p>
+	</form>
 </body>
-<script>
-    $("#bt1").click(function(){
-        let data = {
-            name : '故宫'
-        }
-        $.ajax({
-            url : 'ajax/',
-            type: 'post',
-            headers:{
-                // 要加 csrf 的请求头，如下
-                "X-CSRFToken": '{{ csrf_token }}',
-                // 要改请求头，以 json 格式发送信息
-                'Content-Type': 'application/json',
-            },
-            data: JSON.stringify(data),
-            dataType: "json",
-        }).done(function (result) {
-            console.log(result)
-            $("#arg").text(result.pos)
-        })
-    });
-</script>
 </html>
