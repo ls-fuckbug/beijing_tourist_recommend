@@ -1,5 +1,4 @@
 from django.shortcuts import render,HttpResponse
-from .sam.getAddr import get_position
 import json
 
 
@@ -17,13 +16,19 @@ def mainWindow(request):
 def travelHome(request):
     return render(request,"index.html")
 
+def spot_choose(request):
+    return render(request,"spot.html")
+
+def route_show(request):
+    return render(request,"route.html")
+
 
 def getArgx(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         print (data)
         # TODO 处理函数
-        pos = get_position(data["name"])
+        pos = s
 
         result = {
             'pos':pos
@@ -38,9 +43,6 @@ def about(request):
 def gallery(request):
     return render(request,"gallery.html")
 
-def icons(request):
-    return render(request,"icons.html")
-
 def error404(request):
     return render(request,"404.html")
 
@@ -53,5 +55,3 @@ def blog_single(request):
 def contact(request):
     return render(request,"contact.html")
 
-def select(request):
-    return render(request,"select.html")

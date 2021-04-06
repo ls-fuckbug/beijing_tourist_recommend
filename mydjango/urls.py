@@ -12,8 +12,8 @@ urlpatterns = [
     path('blog-single.html', view.blog_single),
     path('contact.html', view.contact),
     path('gallery.html', view.gallery),
-    path('icons.html', view.icons),
-    path('select/', view.select),
+    path('spot.html', view.spot_choose),
+    path('route.html', view.route_show),
     path('home/', view.mainWindow),
     path('home/ajax/', view.getArgx),
 ]
