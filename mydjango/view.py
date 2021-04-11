@@ -1,8 +1,11 @@
 from django.shortcuts import render,HttpResponse
 import json
 import urllib.parse
+#from .sam import main_pro
+#from main_pro import tra_rec
 
 
+# test
 def mainWindow(request):
     url = "<a href='http://127.0.0.1:8000/login/'>点击跳转</a>"
     context = dict()
@@ -23,14 +26,6 @@ def route_show(request):
     return render(request,"route.html")
 
 
-def reco(request):
-    if request.method == "POST":
-        spot = urllib.parse.unquote(str(request.body,'utf-8'))
-        print(spot)
-        spot_ag = spot.split('&')
-        print(spot_ag)
-        spot_list = [ s.lstrip('spot=') for s in spot_ag]
-        print(spot_list)
 
 
     return render(request, "route.html")
@@ -59,3 +54,14 @@ def blog_single(request):
 def contact(request):
     return render(request,"contact.html")
 
+
+def reco(request):
+    if request.method == "POST":
+        spot = urllib.parse.unquote(str(request.body,'utf-8'))
+        print(spot)
+        spot_ag = spot.split('&')
+        print(spot_ag)
+        spot_list = [ s.lstrip('spot=') for s in spot_ag]
+        print(spot_list)
+        #tra_rec(spot_list,10)
+    return  render(request,"route.html")

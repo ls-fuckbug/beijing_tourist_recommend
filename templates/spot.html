@@ -8,7 +8,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8">s
 
     <title>Travel Portal</title>
     <meta name="description" content="">
@@ -77,11 +77,12 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2 class="block-header">Around the world</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+                <h2 class="block-header">美丽-北京</h2>
+                <p>挑选你喜欢的景点</p>
             </div>
         </div>
 
+        <form action="/reco" method = "post">
         <div class="row">
             <ul id="gallery-grid" class="gallery-grid col-sm-12">
 
@@ -90,21 +91,9 @@
                        data-description="data-description">
                         <img src="static/example/gallery/01.jpg" alt=""/>
                     </a>
-                    <h3>Lorem Ipsum Dolor</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 1 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+
                 </li>
 
 
@@ -113,21 +102,9 @@
                        data-description="data-description">
                         <img src="static/example/gallery/02.jpg" alt=""/>
                     </a>
-                    <h3>Quis aute iure</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 2 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>颐和园</h3>
+                     <p> <input type="checkbox" name="spot" value="颐和园" />想去 </p>
+
                 </li>
 
                 <li>
@@ -135,21 +112,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/03.jpg" alt=""/>
                     </a>
-                    <h3>Reprehenderit Oluptate</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 3 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>八达岭长城</h3>
+                     <p> <input type="checkbox" name="spot" value="八达岭长城" />想去 </p>
                 </li>
 
                 <li>
@@ -157,21 +121,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/04.jpg" alt=""/>
                     </a>
-                    <h3>Velit Esse Cillum</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 4 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>天坛</h3>
+                     <p> <input type="checkbox" name="spot" value="天坛" />想去 </p>
                 </li>
 
                 <li>
@@ -179,21 +130,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/05.jpg" alt=""/>
                     </a>
-                    <h3>Lorem Ipsum Dolor</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 5 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -202,21 +140,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/06.jpg" alt=""/>
                     </a>
-                    <h3>Quis aute iure</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 6 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
                 <li>
@@ -224,21 +149,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/07.jpg" alt=""/>
                     </a>
-                    <h3>Reprehenderit Oluptate</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 7 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
                 <li>
@@ -246,21 +158,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/08.jpg" alt=""/>
                     </a>
-                    <h3>Velit Esse Cillum</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 8 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
                 <li>
@@ -268,21 +167,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/09.jpg" alt=""/>
                     </a>
-                    <h3>Velit Esse Cillum</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 9 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -291,21 +177,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/10.jpg" alt=""/>
                     </a>
-                    <h3>Velit Esse Cillum</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 10 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -314,21 +187,8 @@
                        data-description="data-description">
                         <img src="static/example/gallery/11.jpg" alt=""/>
                     </a>
-                    <h3>Velit Esse Cillum</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 11 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -337,29 +197,14 @@
                        data-description="data-description">
                         <img src="static/example/gallery/12.jpg" alt=""/>
                     </a>
-                    <h3>Velit Esse Cillum</h3>
-                    <div class="portfolio_description">
-                        <div class="block">
-                            <h3>Project 12 Details</h3>
-                            <p class="description">
-                                At vero eos et accusam et justo duo dolores et ea rebum. Ut wisi enim adinim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="skills"><span>Skills:</span> Photography, Photoshop, Illustration</p>
-                            <p class="client"><span>Client:</span> <a href="#">Client</a></p>
-                            <p class="location"><span>Location:</span> <a href="#">www.project.com</a></p>
-                            <p class="view-project"><a href="#" class="theme_btn">View Project</a></p>
-                        </div>
-                    </div>
-
-                    <!-- submit   -->
-
-
+                    <h3>故宫</h3>
+                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
-
             </ul>
         </div>
+            <!-- submit   -->
+            <p><input id="submit" type="submit" value="提交"/></p>
+        </form>
 
     </div>
 </section>

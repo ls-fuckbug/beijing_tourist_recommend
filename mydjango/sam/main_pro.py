@@ -1,7 +1,7 @@
-from data_process import all_words
+from data_process import *
 from lda import *
-from tfidf import tfidf_vc
-from load_spot import load_sp
+from tfidf import *
+from load_spot import *
 from user_choose import *
 from load_routes import *
 
