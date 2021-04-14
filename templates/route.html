@@ -6,10 +6,111 @@
 		body, html {width: 100%;height: 100%; margin:0;font-family:"微软雅黑";}
 		#allmap{height:800px;width:100%;}
 		#r-result,#r-result table{width:100%;}
+
+        .shiny-button {
+          display: inline-block;
+          text-align: center;
+          border-width: 1px;
+          border-style: solid;
+          text-transform: uppercase;
+          text-decoration: none;
+          line-height: 1.1;
+          font-weight: normal;
+          font-family: sans-serif;
+          color: #FFFFFF;
+          font-size: 12px;
+          background-color: #484B4D;
+          background-image: -webkit-linear-gradient(top, #4a4e50 0%, #5f5f5f 48%, #484B4D 49%, #484B4D 82%, #56595b 100%);
+          background-image: -moz-linear-gradient(top, #4a4e50 0%, #5f5f5f 48%, #484B4D 49%, #484B4D 82%, #56595b 100%);
+          background-image: -o-linear-gradient(top, #4a4e50 0%, #5f5f5f 48%, #484B4D 49%, #484B4D 82%, #56595b 100%);
+          background-image: linear-gradient(top, #4a4e50 0%, #5f5f5f 48%, #484B4D 49%, #484B4D 82%, #56595b 100%);
+          border-color: hsl(0, 0%, 29%);
+          -webkit-box-shadow: inset 0 0 1px 1px #72777a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: inset 0 0 1px 1px #72777a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 1px 1px #72777a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+          -webkit-text-shadow: 1px 1px 1px #171818;
+          -moz-text-shadow: 1px 1px 1px #171818;
+          -o-text-shadow: 1px 1px 1px #171818;
+          text-shadow: 1px 1px 1px #171818;
+          -webkit-border-radius: 16px;
+          -moz-border-radius: 16px;
+          border-radius: 16px;
+          padding: 12px 30px 12px 30px;
+        }
+
+        .shiny-button strong {
+          letter-spacing: 1px;
+          font-size: 22px;
+        }
+
+        .shiny-button:hover {
+          color: #FFFFFF;
+          background-color: #4f5355;
+          background-image: -webkit-linear-gradient(top, #515658 0%, #666 48%, #4f5355 49%, #4f5355 82%, #5d6164 100%);
+          background-image: -moz-linear-gradient(top, #515658 0%, #666 48%, #4f5355 49%, #4f5355 82%, #5d6164 100%);
+          background-image: -o-linear-gradient(top, #515658 0%, #666 48%, #4f5355 49%, #4f5355 82%, #5d6164 100%);
+          background-image: linear-gradient(top, #515658 0%, #666 48%, #4f5355 49%, #4f5355 82%, #5d6164 100%);
+          border-color: hsl(0, 0%, 32%);
+          -webkit-box-shadow: inset 0 0 1px 1px #767c7f, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: inset 0 0 1px 1px #767c7f, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 1px 1px #767c7f, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+          -webkit-text-shadow: 1px 1px 1px #1e1f20;
+          -moz-text-shadow: 1px 1px 1px #1e1f20;
+          -o-text-shadow: 1px 1px 1px #1e1f20;
+          text-shadow: 1px 1px 1px #1e1f20;
+        }
+
+        .shiny-button:active {
+          color: #FFFFFF;
+          background-color: #414345;
+          background-image: -webkit-linear-gradient(top, #3c3e40 0%, #484B4D 100%);
+          background-image: -moz-linear-gradient(top, #3c3e40 0%, #484B4D 100%);
+          background-image: -o-linear-gradient(top, #3c3e40 0%, #484B4D 100%);
+          background-image: linear-gradient(top, #3c3e40 0%, #484B4D 100%);
+          padding: 13px 30px 11px 30px;
+        }
+
+        body{
+                background: #5F818A
+            }
+        select{
+                font-family: "微软雅黑";
+                margin:50px;
+                background: rgba(0,0,0,0);
+                width: 200px;
+                height: 40px;
+                font-size: 18px;
+                color: white;
+                text-align: center;
+                border: 1px #1a1a1a solid;
+                border-radius: 5px;
+            }
+        option{
+                color: black;
+                background: #AB8E8E;
+                line-height: 20px;
+            }
+        select:focus{
+                border: 2px #ddd solid;
+                box-shadow: 0 0 15px 1px #EBDFDF;
+            }
+        option:hover{
+                background: #8EAB9F;
+            }
+        #r-result{
+            border: 1px solid black;
+        }
+        #r-result span{
+            border: 1px solid black;
+        }
 	</style>
+
 	<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=QWvIBj7ebRmywj1dxzKgZwFqcLESKGQA"></script>
 	<script src="https://code.bdstatic.com/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-	<title>根据起终点名称驾车导航</title>
+	<title>旅游路线</title>
+
+
+
 </head>
 <body>
 	<div id="allmap"></div>
@@ -19,9 +120,12 @@
 			<option value="1">最短距离</option>
 			<option value="2">避开高速</option>
 		</select>
-		<input type="button" id="result" value="查询"/>
+		<input type="button" id="result" class="shiny-button"  value="获取路线"/>
 	</div>
-	<div id="r-result"></div>
+
+	<div id="r-result">
+        <span>{{ spot_name }}  </span>
+    </div>
 </body>
 </html>
 <script type="text/javascript">
@@ -34,9 +138,8 @@
 	//三种驾车策略：最少时间，最短距离，避开高速
 	var routePolicy = [BMAP_DRIVING_POLICY_LEAST_TIME,BMAP_DRIVING_POLICY_LEAST_DISTANCE,BMAP_DRIVING_POLICY_AVOID_HIGHWAYS];
 
-
-    var spot_list =["天安门","百度大厦","颐和园","香山公园"];
-
+    // 获得路线列表
+    var spot_list = {{ spot_name | safe }}
 
 	$("#result").click(function()
     {
@@ -51,9 +154,9 @@
 		function search(start,end,route){
 			var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true},policy: route});
 			driving.search(start,end);
-
-            var startIcon=new BMap.Icon("../static/images/logo.png", new BMap.Size(40,50));
-            var endIcon = new BMap.Icon("../static/images/logo.png", new BMap.Size(40,50));
+            // 更改图标大小
+            var startIcon=new BMap.Icon("../static/images/spot.png", new BMap.Size(50,50));
+            var endIcon = new BMap.Icon("../static/images/spot.png", new BMap.Size(50,50));
             driving.setMarkersSetCallback(function(result)
             {
             result[0].marker.setIcon(startIcon);
@@ -61,7 +164,6 @@
             })
 
 		}
-
 
 
 	});

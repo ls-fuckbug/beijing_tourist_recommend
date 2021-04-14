@@ -54,12 +54,14 @@ def contact(request):
 
 def reco(request):
     if request.method == "POST":
-        spot = urllib.parse.unquote(str(request.body,'utf-8'))
-        print(spot)
-        spot_ag = spot.split('&')
-        print(spot_ag)
-        spot_list = [ s.lstrip('spot=') for s in spot_ag]
+        raw_data = urllib.parse.unquote(str(request.body,'utf-8'))
+        spot_data = raw_data.split('&')
+        spot_list = [ s.lstrip('spot=') for s in spot_data]
         print(spot_list)
-        res_list = tra_rec(spot_list,10)
-        print(res_list)
-    return  render(request,"route.html")
+        route_list = tra_rec(spot_list,10)
+        print(route_list)
+
+        route = dict()
+        route['spot_name'] = route_list[0]
+
+    return render(request,"route.html",route)
