@@ -36,7 +36,7 @@ def spot_mat(name,routes):
     
     
 if __name__ == '__main__':
-    route = load_route('北京数据/北京旅游路线.txt')
+    route = load_route('mydjango/sam/北京数据/北京旅游路线.txt')
     
 
 

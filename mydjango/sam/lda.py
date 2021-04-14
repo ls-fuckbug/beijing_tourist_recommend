@@ -1,5 +1,5 @@
 from sklearn.decomposition import LatentDirichletAllocation
-from sklearn.externals import joblib
+import joblib
 import numpy
 
 
@@ -30,5 +30,5 @@ def lda_model(mat):
 
 def load_lda_doc():
     #加载保存的文档主题矩阵
-    docres = numpy.load('doc_topic_result.dat')
+    docres = numpy.load('C:\\Users\\samliu\\Desktop\\mydjango\\mydjango\\sam\\doc_topic_result.dat', encoding='bytes', allow_pickle=True)
     return docres

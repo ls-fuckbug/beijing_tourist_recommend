@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">s
 
-    <title>Travel Portal</title>
+    <title>旅游景点挑选</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,12 +24,52 @@
     <!--[if lt IE 9]>
     <script src="static/js/vendor/respond.min.js"></script>
     <![endif]-->
+
+
+    <style type="text/css">
+   .check {
+      cursor: pointer;
+        width: 18px;
+        height: 18px;
+        top:0;
+        left: 0;
+        background: transparent;
+        border: 1px solid #979797;
+    }
+    #submit {
+        margin-left: 500px;
+    }
+    #submit {
+        width: 120px;
+        height: 50px;
+        box-shadow: 0 1px 0 0 #f0f7fa;
+        background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+        background-color:#33bdef;
+        border-radius:6px;
+        border:1px solid #057fd0;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0 -1px 0 #5b6178;
+    }
+    #submit:hover {
+        background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color:#019ad2;
+    }
+    #submit:active {
+        position:relative;
+        top:1px;
+    }
+
+</style>
+
 </head>
 <body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+
 
 <header id="header" class="light_section">
     <div class="container">
@@ -92,7 +132,7 @@
                         <img src="static/example/gallery/01.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
 
                 </li>
 
@@ -103,7 +143,7 @@
                         <img src="static/example/gallery/02.jpg" alt=""/>
                     </a>
                     <h3>颐和园</h3>
-                     <p> <input type="checkbox" name="spot" value="颐和园" />想去 </p>
+                     <p> <input class="check" type="checkbox" name="spot" value="颐和园" />想去 </p>
 
                 </li>
 
@@ -113,7 +153,7 @@
                         <img src="static/example/gallery/03.jpg" alt=""/>
                     </a>
                     <h3>八达岭长城</h3>
-                     <p> <input type="checkbox" name="spot" value="八达岭长城" />想去 </p>
+                     <p> <input class="check" type="checkbox" name="spot" value="八达岭长城" />想去 </p>
                 </li>
 
                 <li>
@@ -122,7 +162,7 @@
                         <img src="static/example/gallery/04.jpg" alt=""/>
                     </a>
                     <h3>天坛</h3>
-                     <p> <input type="checkbox" name="spot" value="天坛" />想去 </p>
+                     <p> <input class="check" type="checkbox" name="spot" value="天坛" />想去 </p>
                 </li>
 
                 <li>
@@ -131,7 +171,7 @@
                         <img src="static/example/gallery/05.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -141,7 +181,7 @@
                         <img src="static/example/gallery/06.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
                 <li>
@@ -150,7 +190,7 @@
                         <img src="static/example/gallery/07.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
                 <li>
@@ -159,7 +199,7 @@
                         <img src="static/example/gallery/08.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
                 <li>
@@ -168,7 +208,7 @@
                         <img src="static/example/gallery/09.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -178,7 +218,7 @@
                         <img src="static/example/gallery/10.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -188,7 +228,7 @@
                         <img src="static/example/gallery/11.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
 
 
@@ -198,7 +238,7 @@
                         <img src="static/example/gallery/12.jpg" alt=""/>
                     </a>
                     <h3>故宫</h3>
-                    <p> <input type="checkbox" name="spot" value="故宫" />想去 </p>
+                    <p> <input class="check" type="checkbox" name="spot" value="故宫" />想去 </p>
                 </li>
             </ul>
         </div>

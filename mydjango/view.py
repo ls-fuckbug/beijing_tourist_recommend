@@ -1,8 +1,9 @@
 from django.shortcuts import render,HttpResponse
 import json
 import urllib.parse
-#from .sam import main_pro
-#from main_pro import tra_rec
+from .sam.main_pro import *
+
+
 
 
 # test
@@ -25,10 +26,6 @@ def spot_choose(request):
 def route_show(request):
     return render(request,"route.html")
 
-
-
-
-    return render(request, "route.html")
 
 
 def about(request):
@@ -63,5 +60,6 @@ def reco(request):
         print(spot_ag)
         spot_list = [ s.lstrip('spot=') for s in spot_ag]
         print(spot_list)
-        #tra_rec(spot_list,10)
+        res_list = tra_rec(spot_list,10)
+        print(res_list)
     return  render(request,"route.html")

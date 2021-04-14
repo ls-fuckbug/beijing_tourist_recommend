@@ -1,9 +1,9 @@
-from data_process import *
-from lda import *
-from tfidf import *
-from load_spot import *
-from user_choose import *
-from load_routes import *
+from .data_process import *
+from .lda import *
+from .tfidf import *
+from .load_spot import *
+from .user_choose import *
+from .load_routes import *
 
 
 # 旅游推荐算法主体
@@ -17,7 +17,6 @@ def tra_rec(in_spots,n):
     # wdic,weight_mat=tfidf_vc(all_wd)
     # #训练lda模型
     # lda_model(weight_mat)
-
 
     #加载lda模型
     docres = load_lda_doc()
@@ -42,7 +41,7 @@ def tra_rec(in_spots,n):
  
     #############第二部分，推荐路线产生#########################
     # 加载旅游路线
-    route = load_route('北京数据/北京旅游路线.txt')
+    route = load_route('mydjango/sam/北京数据/北京旅游路线.txt')
     order_mat = spot_mat(name,route)                      # 路线次序矩阵
     # 建立景点得分字典并排序
     spot_score = {}
@@ -53,7 +52,7 @@ def tra_rec(in_spots,n):
     sp_over = {}               # 景点是否已经处理完成过
     for spot_i in out_spots_i:
         sp_over[spot_i] = False
-    out_route_i=[]            # 输出路线列表
+    out_route_i = list()                                                # 输出路线列表
     out_route_i.append(list(sspot_score.items())[0][0])             # 第一个景点取评分最高的
     sp_over[list(sspot_score.items())[0][0]] = True               # 第一个景点标记为处理过
     # 处理其余景点
@@ -80,12 +79,8 @@ def tra_rec(in_spots,n):
         out_routes.append(name[i])
         out_routes_addr.append(adre[i])
         out_routes_ltd.append(ltd[i])
-    
 
     return out_routes,out_routes_addr,out_routes_ltd
-
-
-
 
 
 if __name__ == '__main__':

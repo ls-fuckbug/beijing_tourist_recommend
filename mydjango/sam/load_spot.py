@@ -1,10 +1,10 @@
 #加载景点信息
 
 def load_sp():
-    s_file=open('北京数据\\北京景点名称.txt', 'r', encoding='utf-8', errors='ignore')
-    a_file=open('北京数据\\北京景点地址.txt', 'r', encoding='utf-8', errors='ignore')
-    c_file=open('北京数据\\北京景点评分.txt', 'r', encoding='utf-8', errors='ignore')
-    l_file=open('北京数据\\北京景点经纬度信息.txt', 'r', encoding='utf-8', errors='ignore')
+    s_file=open('mydjango/sam/北京数据/北京景点名称.txt', 'r', encoding='utf-8', errors='ignore')
+    a_file=open('mydjango/sam/北京数据/北京景点地址.txt', 'r', encoding='utf-8', errors='ignore')
+    c_file=open('mydjango/sam/北京数据/北京景点评分.txt', 'r', encoding='utf-8', errors='ignore')
+    l_file=open('mydjango/sam/北京数据/北京景点经纬度信息.txt', 'r', encoding='utf-8', errors='ignore')
     name=[]
     adre=[]
     score=[]
