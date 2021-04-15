@@ -35,11 +35,36 @@
         left: 0;
         border: 1px solid #979797;
     }
+
+    #count{
+        margin-left: 500px;
+    }
+    #count {
+        width: 150px;
+        height: 50px;
+        box-shadow: 0 1px 0 0 #f0f2fa;
+        background-color: #d5cc8f;
+        border-radius:6px;
+        border:1px solid #057fd0;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0 -1px 0 #5b6178;
+    }
+    #count:hover {
+        background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color:#afd9ee;
+    }
+
     #submit {
         margin-left: 500px;
     }
     #submit {
-        width: 120px;
+        width: 150px;
         height: 50px;
         box-shadow: 0 1px 0 0 #f0f7fa;
         background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
@@ -241,6 +266,8 @@
                 </li>
             </ul>
         </div>
+
+            <p><input id="count" type="text" name = "num" placeholder="输入景点个数"/></p>
             <!-- submit   -->
             <p><input id="submit" type="submit" value="提交"/></p>
         </form>

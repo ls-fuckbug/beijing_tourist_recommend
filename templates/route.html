@@ -147,21 +147,34 @@
 		var i=$("#driving_way select").val();
 
 		for (let i = 0; i <spot_list.length-1; i++)
-		{
-		    search(spot_list[i],spot_list[i+1])
+		{   if (i == 0)
+		        search(true,spot_list[i],spot_list[i+1])
+            else
+                search(false,spot_list[i],spot_list[i+1])
         }
 		// 根据起始点显示路线
-		function search(start,end,route){
+		function search(is_begin,start,end,route){
 			var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true},policy: route});
+
 			driving.search(start,end);
-            // 更改图标大小
-            var startIcon=new BMap.Icon("../static/images/spot.png", new BMap.Size(50,50));
+
+            // 更改图标
+            // 起点显示
+            if (is_begin)
+                var startIcon=new BMap.Icon("../static/images/begin.png", new BMap.Size(50,50));
+            else
+                var startIcon=new BMap.Icon("../static/images/spot.png", new BMap.Size(0,0));
+            // 终点显示
             var endIcon = new BMap.Icon("../static/images/spot.png", new BMap.Size(50,50));
             driving.setMarkersSetCallback(function(result)
             {
             result[0].marker.setIcon(startIcon);
+            result[0].marker.set
+
             result[1].marker.setIcon(endIcon);
+
             })
+
 
 		}
 

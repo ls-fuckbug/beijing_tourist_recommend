@@ -14,6 +14,32 @@
         background: transparent;
         border: 1px solid #979797;
     }
+    #count{
+        margin-left: 500px;
+    }
+    #count {
+        width: 250px;
+        height: 50px;
+        box-shadow: 0 1px 0 0 #f0f2fa;
+        background:linear-gradient(to bottom, #3abfef 5%, #f1fada 100%);
+        background-color:#317a1f;
+        border-radius:6px;
+        border:1px solid #057fd0;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0 -1px 0 #5b6178;
+    }
+    #count:hover {
+        background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color:#afd9ee;
+    }
+
+
     #submit{
         margin-left: 500px;
     }
@@ -21,7 +47,7 @@
         width: 100px;
         height: 72px;
         box-shadow: 0 1px 0 0 #f0f7fa;
-        background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+        background:linear-gradient(to bottom, #33bdef 5%, #a1fad2 100%);
         background-color:#33bdef;
         border-radius:6px;
         border:1px solid #057fd0;
@@ -57,6 +83,8 @@
 		<p><input class="check" type="checkbox" name="spot" value="王府井" />王府井</p>
 		<p><input class="check" type="checkbox" name="spot" value="人民大会堂" />人民大会堂</p>
 
+
+        <p><input id="count" type="text" value="您大概想要去多少个景点？"/></p>
 		<p><input id="submit" type="submit" value="提交"/></p>
 	</form>
 </body>

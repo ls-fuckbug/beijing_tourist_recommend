@@ -54,13 +54,19 @@ def contact(request):
 
 def reco(request):
     if request.method == "POST":
+        # 解析参数
         raw_data = urllib.parse.unquote(str(request.body,'utf-8'))
         spot_data = raw_data.split('&')
+        # 取出目标景点个数
+        num = int (spot_data.pop().lstrip('num='))
+        print(num)
+        # 取出选择的景点
         spot_list = [ s.lstrip('spot=') for s in spot_data]
         print(spot_list)
-        route_list = tra_rec(spot_list,10)
+        # 推荐路线
+        route_list = tra_rec(spot_list,num)
         print(route_list)
-
+        # 传给前端
         route = dict()
         route['spot_name'] = route_list[0]
 
