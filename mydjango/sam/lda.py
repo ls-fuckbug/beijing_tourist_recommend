@@ -30,5 +30,5 @@ def lda_model(mat):
 
 def load_lda_doc():
     #加载保存的文档主题矩阵
-    docres = numpy.load('C:\\Users\\samliu\\Desktop\\mydjango\\mydjango\\sam\\doc_topic_result.dat', encoding='bytes', allow_pickle=True)
+    docres = numpy.load('C:\\Users\\83873\\Desktop\\django_travel\\mydjango\\sam\\doc_topic_result.dat', encoding='bytes', allow_pickle=True)
     return docres

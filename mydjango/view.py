@@ -6,15 +6,6 @@ from .sam.main_pro import *
 
 
 
-# test
-def mainWindow(request):
-    url = "<a href='http://127.0.0.1:8000/login/'>点击跳转</a>"
-    context = dict()
-    context['hello'] = 'Hello World!'
-    context["url"] = url
-    return render(request, "hello.html", context)
-
-
 def travelHome(request):
     return render(request,"index.html")
 

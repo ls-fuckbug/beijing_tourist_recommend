@@ -16,7 +16,7 @@ urlpatterns = [
     path('spot.html', view.spot_choose),
     path('route.html', view.route_show),
     path('reco', view.reco),
-    path('spot', view.mainWindow),
+
 
 ]
 
