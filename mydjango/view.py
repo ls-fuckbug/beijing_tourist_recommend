@@ -48,17 +48,27 @@ def reco(request):
         # 解析参数
         raw_data = urllib.parse.unquote(str(request.body,'utf-8'))
         spot_data = raw_data.split('&')
+        spot_num = spot_data.pop().lstrip('num=')
+        # 错误处理
+        if spot_num == "输入景点个数":
+            return render(request, "404.html")
+
         # 取出目标景点个数
-        num = int (spot_data.pop().lstrip('num='))
+        num = int(spot_num)
         print(num)
         # 取出选择的景点
-        spot_list = [ s.lstrip('spot=') for s in spot_data]
+        spot_list = [s.lstrip('spot=') for s in spot_data]
         print(spot_list)
+        # 错误处理
+        if len(spot_list) == 0:
+            return render(request, "404.html")
+
         # 推荐路线
         route_list = tra_rec(spot_list,num)
         print(route_list)
         # 传给前端
         route = dict()
+
         route['spot_name'] = route_list[0]
 
     return render(request,"route.html",route)
