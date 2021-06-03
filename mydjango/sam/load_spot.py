@@ -1,5 +1,6 @@
 #加载景点信息
 
+# 返回景点名，景点地址，景点得分，经纬度信息列表
 def load_sp():
     s_file=open('mydjango/sam/北京数据/北京景点名称.txt', 'r', encoding='utf-8', errors='ignore')
     a_file=open('mydjango/sam/北京数据/北京景点地址.txt', 'r', encoding='utf-8', errors='ignore')

@@ -18,28 +18,22 @@ def tra_rec(in_spots,n):
     # #训练lda模型
     # lda_model(weight_mat)
 
-    #加载lda模型
+    # 加载lda模型
     docres = load_lda_doc()
-    #print(len(docres))  # 文档数目
-    #print(len(docres[0]))  # 主题数目
+
     # 载入景点信息
-    name,adre,score,ltd=load_sp()
+    name, adre, score, ltd = load_sp()
     # 景点与索引对应的词典
-    name_dic={k: v for v, k in enumerate(name)}
-    #print(name_dic)
+    name_dic = {k: v for v, k in enumerate(name)}
     # 对输入景点列表进行处理
-    v=user_vec(docres,name_dic,in_spots)
-    #print(len(v))
-    #print(v)
+    v = user_vec(docres, name_dic, in_spots)
+
     # 输出景点列表
-    out_spots_i=user_spot(docres,v,n)
-    #print(out_spots_i)
-    # out_spots = []
-    # for i in out_spots_i: 
-    #     out_spots.append(name[i])
+    out_spots_i = user_spot(docres, v, n)
 
  
     #############第二部分，推荐路线产生#########################
+
     # 加载旅游路线
     route = load_route('mydjango/sam/北京数据/北京旅游路线.txt')
     order_mat = spot_mat(name,route)                      # 路线次序矩阵

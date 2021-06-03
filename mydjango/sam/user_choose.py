@@ -5,12 +5,7 @@ import numpy as np
 
 # 余弦相似度计算
 def cos_sim(vector_a, vector_b):
-    """
-    计算两个向量之间的余弦相似度
-    :param vector_a: 向量 a
-    :param vector_b: 向量 b
-    :return: sim
-    """
+
     vector_a = np.mat(vector_a)
     vector_b = np.mat(vector_b)
     num = float(vector_a * vector_b.T)
@@ -29,7 +24,7 @@ def user_vec(mat,name_dic,spot_names):
     return v                  # 返回用户特征向量
 
 # 生成用户兴趣景点
-# 经典特征矩阵，用户特征，数量
+# 景点特征矩阵，用户特征，数量
 def user_spot(mat,user_v,n):
     i_sim= {}                     # 景点索引余弦相似度计算
     for i in range(len(mat)):
